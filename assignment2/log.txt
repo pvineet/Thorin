@@ -1,0 +1,72 @@
+==== Gradient check for skip-gram with naiveSoftmaxLossAndGradient ====
+Gradient check failed for naiveSoftmaxLossAndGradient Gradient.
+First gradient error found at index (0, 0) in the vector of gradients
+Your gradient: 0.000000 	 Numerical gradient: -0.087147
+==== Gradient check for skip-gram with negSamplingLossAndGradient ====
+Gradient check failed for negSamplingLossAndGradient Gradient.
+First gradient error found at index (0, 0) in the vector of gradients
+Your gradient: 0.000000 	 Numerical gradient: -4.043862
+
+=== Results ===
+Skip-Gram with naiveSoftmaxLossAndGradient
+Your Result:
+Loss: 11.16610900153398
+Gradient wrt Center Vectors (dJ/dV):
+ [[ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]
+ [-1.26947339 -1.36873189  2.45158957]
+ [ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]]
+Gradient wrt Outside Vectors (dJ/dU):
+ [[-0.41045956  0.18834851  1.43272264]
+ [ 0.38202831 -0.17530219 -1.33348241]
+ [ 0.07009355 -0.03216399 -0.24466386]
+ [ 0.09472154 -0.04346509 -0.33062865]
+ [-0.13638384  0.06258276  0.47605228]]
+
+Expected Result: Value should approximate these:
+Loss: 11.16610900153398
+Gradient wrt Center Vectors (dJ/dV):
+ [[ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]
+ [-1.26947339 -1.36873189  2.45158957]
+ [ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]]
+Gradient wrt Outside Vectors (dJ/dU):
+ [[-0.41045956  0.18834851  1.43272264]
+ [ 0.38202831 -0.17530219 -1.33348241]
+ [ 0.07009355 -0.03216399 -0.24466386]
+ [ 0.09472154 -0.04346509 -0.33062865]
+ [-0.13638384  0.06258276  0.47605228]]
+    
+Skip-Gram with negSamplingLossAndGradient
+Your Result:
+Loss: 16.15119285363322
+Gradient wrt Center Vectors (dJ/dV):
+ [[ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]
+ [-4.54650789 -1.85942252  0.76397441]
+ [ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]]
+ Gradient wrt Outside Vectors (dJ/dU):
+ [[-0.69148188  0.31730185  2.41364029]
+ [-0.22716495  0.10423969  0.79292674]
+ [-0.45528438  0.20891737  1.58918512]
+ [-0.31602611  0.14501561  1.10309954]
+ [-0.80620296  0.36994417  2.81407799]]
+
+Expected Result: Value should approximate these:
+Loss: 16.15119285363322
+Gradient wrt Center Vectors (dJ/dV):
+ [[ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]
+ [-4.54650789 -1.85942252  0.76397441]
+ [ 0.          0.          0.        ]
+ [ 0.          0.          0.        ]]
+ Gradient wrt Outside Vectors (dJ/dU):
+ [[-0.69148188  0.31730185  2.41364029]
+ [-0.22716495  0.10423969  0.79292674]
+ [-0.45528438  0.20891737  1.58918512]
+ [-0.31602611  0.14501561  1.10309954]
+ [-0.80620296  0.36994417  2.81407799]]
+    
